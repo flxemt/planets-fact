@@ -39,7 +39,7 @@ export default function Navbar() {
 
   return (
     <nav className="py-4 uppercase border-b-[1px] border-b-lines xl:py-0 xl:h-[85px]">
-      <div className="max-w-[1368px] mx-auto flex justify-between items-center md:flex-col xl:flex-row px-6 h-full xl:pl-8 xl:pr-10">
+      <div className="max-w-[1368px] mx-auto flex justify-between items-center md:flex-col xl:flex-row px-6 h-full">
         <div className="font-display text-[1.75rem] leading-[2.25rem] tracking-[-1px]">The planets</div>
         <ul className="hidden md:flex gap-[2.0625rem] md:mt-10 font-bold text-h4 leading-h4 tracking-h4 xl:mt-0 h-full">
           {navItems}
