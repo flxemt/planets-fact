@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Spartan';
+  src: url('/fonts/Spartan-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Spartan';
+  src: url('/fonts/Spartan-Bold.ttf');
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: #fff;
+}
+
+@media (min-width: 1190px) {
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--line-color);
+    transition: transform 0.3s;
+    transform: scaleX(0);
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    transform: scaleX(1);
+  }
+}
