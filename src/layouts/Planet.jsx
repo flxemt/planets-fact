@@ -24,12 +24,12 @@ export default function Planet() {
           <DesktopSublink backgroundColor={currentItem.color} to="surface" num="03" text="Surface Geology" />
         </div>
       </main>
-      <div className="xl:container px-6 flex flex-col mt-7 mb-12 uppercase gap-2 md:mt-10 md:px-10 md:flex-row md:gap-[0.6875rem] xl:mt-[5.5rem] xl:gap-[1.875rem]">
+      <section className="xl:container px-6 flex flex-col mt-7 mb-12 uppercase gap-2 md:mt-10 md:px-10 md:flex-row md:gap-[0.6875rem] xl:mt-[5.5rem] xl:gap-[1.875rem]">
         <StatCard text="Rotation Time" value={currentItem.rotation} />
         <StatCard text="Revolution Time" value={currentItem.revolution} />
         <StatCard text="Radius" value={currentItem.radius} />
         <StatCard text="Average Temp." value={currentItem.temperature} />
-      </div>
+      </section>
     </>
   )
 }

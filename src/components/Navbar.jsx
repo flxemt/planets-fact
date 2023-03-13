@@ -12,7 +12,7 @@ export default function Navbar() {
 
   useEffect(() => {
     document.documentElement.scrollTop = 0
-    document.documentElement.className = isOpen ? 'overflow-hidden' : ''
+    document.documentElement.className = isOpen ? 'overflow-hidden md:overflow-auto' : ''
   }, [isOpen])
 
   const navItems = data.map(item => (
@@ -48,7 +48,7 @@ export default function Navbar() {
           className="fixed left-0 top-0 w-full h-full bg-dark-blue mt-[4.3rem] transition-all duration-300 z-10 md:hidden"
           style={{ transform: `translateY(${isOpen ? '0' : '100%'})`, visibility: isOpen ? 'visible' : 'hidden' }}
         >
-          <ul className="px-6 mt-6 font-bold text-[0.9375rem] leading-h3">{mobileNavItems}</ul>
+          <ul className="px-6 mt-6 mb-20 font-bold text-[0.9375rem] leading-h3 overflow-y-auto">{mobileNavItems}</ul>
         </div>
         <button aria-label="Open navigation" onClick={toggleOpen} className="md:hidden">
           <img src="/assets/icon-hamburger.svg" alt="Hamburger icon" />
