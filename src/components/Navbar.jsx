@@ -38,22 +38,18 @@ export default function Navbar() {
   ))
 
   return (
-    <nav className="py-4 uppercase border-b-[1px] border-b-lines xl:py-0 xl:h-[85px]">
-      <div className="max-w-[1368px] mx-auto flex justify-between items-center md:flex-col xl:flex-row px-6 h-full">
-        <div className="font-display text-[1.75rem] leading-[2.25rem] tracking-[-1px]">The planets</div>
-        <ul className="hidden md:flex gap-[2.0625rem] md:mt-10 font-bold text-h4 leading-h4 tracking-h4 xl:mt-0 h-full">
-          {navItems}
-        </ul>
-        <div
-          className="fixed left-0 top-0 w-full h-full bg-dark-blue mt-[4.3rem] transition-all duration-300 z-10 md:hidden"
-          style={{ transform: `translateY(${isOpen ? '0' : '100%'})`, visibility: isOpen ? 'visible' : 'hidden' }}
-        >
-          <ul className="px-6 mt-6 mb-20 font-bold text-[0.9375rem] leading-h3 overflow-y-auto">{mobileNavItems}</ul>
-        </div>
-        <button aria-label="Open navigation" onClick={toggleOpen} className="md:hidden">
-          <img src="/assets/icon-hamburger.svg" alt="Hamburger icon" />
-        </button>
+    <nav className="px-6 py-4 uppercase border-b-[1px] border-b-lines h-full flex justify-between items-center md:flex-col xl:flex-row xl:py-0 xl:h-[85px] xl:px-8">
+      <div className="font-display text-[1.75rem] leading-[2.25rem] tracking-[-1px]">The planets</div>
+      <ul className="hidden md:flex gap-[2.0625rem] md:mt-10 font-bold text-h4 leading-h4 tracking-h4 xl:mt-0 h-full">{navItems}</ul>
+      <div
+        className="fixed left-0 top-0 w-full h-full bg-dark-blue mt-[4.3rem] transition-all duration-300 z-10 md:hidden"
+        style={{ transform: `translateY(${isOpen ? '0' : '100%'})`, visibility: isOpen ? 'visible' : 'hidden' }}
+      >
+        <ul className="px-6 mt-6 mb-20 font-bold text-[0.9375rem] leading-h3 overflow-y-auto">{mobileNavItems}</ul>
       </div>
+      <button aria-label="Open navigation" onClick={toggleOpen} className="md:hidden">
+        <img src="/assets/icon-hamburger.svg" alt="Hamburger icon" />
+      </button>
     </nav>
   )
 }

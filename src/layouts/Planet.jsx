@@ -16,19 +16,23 @@ export default function Planet() {
   return (
     <>
       <Subnav currentItem={currentItem} />
-      <main className="grid md:grid-cols-2 px-6 md:px-10 md:gap-x-16 xl:container xl:justify-between xl:mt-[7.875rem]">
-        <Outlet context={{ currentItem }} />
-        <div className="hidden md:flex mt-[3.5rem] flex-col gap-4 ml-auto w-full uppercase tracking-[1.93px] text-[0.5625rem] leading-[1.5625rem] font-bold xl:max-w-[350px] xl:mt-10">
-          <DesktopSublink backgroundColor={currentItem.color} to="." end num="01" text="Overview" />
-          <DesktopSublink backgroundColor={currentItem.color} to="structure" num="02" text="Internal Structure" />
-          <DesktopSublink backgroundColor={currentItem.color} to="surface" num="03" text="Surface Geology" />
+      <main className="px-6 mt-16 md:px-10 xl:mt-[7.875rem]">
+        <div className="max-w-container mx-auto grid gap-16 items-center md:grid-cols-2 md:gap-y-20 xl:justify-between xl:gap-y-10">
+          <Outlet context={{ currentItem }} />
+          <div className="hidden md:flex mt-[3.5rem] flex-col gap-4 ml-auto w-full uppercase tracking-[1.93px] text-[0.5625rem] leading-[1.5625rem] font-bold md:mt-0 xl:max-w-[350px]">
+            <DesktopSublink backgroundColor={currentItem.color} to="." end num="01" text="Overview" />
+            <DesktopSublink backgroundColor={currentItem.color} to="structure" num="02" text="Internal Structure" />
+            <DesktopSublink backgroundColor={currentItem.color} to="surface" num="03" text="Surface Geology" />
+          </div>
         </div>
       </main>
-      <div className="xl:container px-6 flex flex-col mt-7 mb-12 uppercase gap-2 md:mt-10 md:px-10 md:flex-row md:gap-[0.6875rem] xl:mt-[5.5rem] xl:gap-[1.875rem]">
-        <StatCard text="Rotation Time" value={currentItem.rotation} />
-        <StatCard text="Revolution Time" value={currentItem.revolution} />
-        <StatCard text="Radius" value={currentItem.radius} />
-        <StatCard text="Average Temp." value={currentItem.temperature} />
+      <div className="mt-7 px-6 mb-12 md:mt-10 md:px-10 xl:mt-[5.5rem]">
+        <div className="max-w-container mx-auto flex flex-col uppercase gap-2 md:flex-row md:gap-[0.6875rem] xl:gap-[1.875rem]">
+          <StatCard text="Rotation Time" value={currentItem.rotation} />
+          <StatCard text="Revolution Time" value={currentItem.revolution} />
+          <StatCard text="Radius" value={currentItem.radius} />
+          <StatCard text="Average Temp." value={currentItem.temperature} />
+        </div>
       </div>
     </>
   )

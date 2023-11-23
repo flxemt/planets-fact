@@ -36,12 +36,13 @@ module.exports = {
     backgroundImage: {
       stars: 'url("/assets/background-stars.svg")'
     },
-    container: {
-      center: true
+    maxWidth: {
+      container: '1110px',
+      none: 'none'
     },
     screens: {
       md: '768px',
-      xl: '1190px'
+      xl: '1110px'
     }
   },
   plugins: []

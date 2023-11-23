@@ -5,18 +5,10 @@ export default function Overview({ image, type }) {
 
   return (
     <>
-      <div className="my-6 flex flex-col justify-center items-center md:col-span-2 xl:col-span-1 xl:row-span-2 xl:items-center">
-        <img
-          className="max-w-[173px] md:max-w-[285px] xl:max-w-none"
-          src={currentItem.images[image]}
-          alt={currentItem.name}
-        />
+      <div className="flex flex-col justify-center items-center md:col-span-2 xl:col-span-1 xl:row-span-2 xl:items-center xl:ml-[5.625rem]">
+        <img className="max-w-[173px] md:max-w-[285px] xl:max-w-none" src={currentItem.images[image]} alt={currentItem.name} />
         {type === 'geology' && (
-          <img
-            src={currentItem.images.geology}
-            className="max-w-[75px] mt-[-2.5rem] xl:max-w-[163px] xl:mt-[-5rem]"
-            alt="Geology"
-          />
+          <img src={currentItem.images.geology} className="max-w-[75px] mt-[-2.5rem] xl:max-w-[163px] xl:mt-[-5rem]" alt="Geology" />
         )}
       </div>
       <div className="text-center md:text-left xl:max-w-[350px] xl:justify-self-end">
